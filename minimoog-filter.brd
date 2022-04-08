@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
@@ -1370,16 +1371,23 @@ design rules under a new name.</description>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
+<param name="checkNames" value="1"/>
+<param name="checkWireStubs" value="1"/>
+<param name="checkPolygonWidth" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
+<param name="AutoGrid" value="1"/>
+<param name="Efforts" value="0"/>
+<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
@@ -1471,64 +1479,238 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="T1" library="transistor" package="SOT23" value="BC847" x="-30.48" y="15.24"/>
-<element name="T2" library="transistor" package="SOT23" value="BC847" x="-38.1" y="15.24"/>
-<element name="T3" library="transistor" package="SOT23" value="BC847" x="-45.72" y="15.24"/>
-<element name="T4" library="transistor" package="SOT23" value="BC847" x="-53.34" y="15.24"/>
-<element name="T5" library="transistor" package="SOT23" value="BC847" x="-60.96" y="15.24"/>
-<element name="T6" library="transistor" package="SOT23" value="BC847" x="-17.78" y="22.86"/>
-<element name="T7" library="transistor" package="SOT23" value="BC847" x="-25.4" y="22.86"/>
-<element name="T8" library="transistor" package="SOT23" value="BC847" x="-33.02" y="22.86"/>
-<element name="T9" library="transistor" package="SOT23" value="BC847" x="-40.64" y="22.86"/>
-<element name="T10" library="transistor" package="SOT23" value="BC847" x="-48.26" y="22.86"/>
-<element name="C1" library="resistor" package="C0805" value="47n" x="-31.75" y="50.8"/>
-<element name="C2" library="resistor" package="C0805" value="47n" x="-36.83" y="50.8"/>
-<element name="C3" library="resistor" package="C0805" value="47n" x="-41.91" y="50.8"/>
-<element name="C4" library="resistor" package="C0805" value="47n" x="-46.99" y="50.8"/>
-<element name="R1" library="resistor" package="R0805" value="330" x="-41.91" y="44.45"/>
-<element name="R2" library="resistor" package="R0805" value="150" x="-46.99" y="44.45"/>
-<element name="R3" library="resistor" package="R0805" value="150" x="-52.07" y="44.45"/>
-<element name="R4" library="resistor" package="R0805" value="150" x="-57.15" y="44.45"/>
-<element name="R5" library="resistor" package="R0805" value="1k" x="-52.07" y="50.8"/>
-<element name="R6" library="resistor" package="R0805" value="470" x="-62.23" y="44.45"/>
-<element name="R7" library="resistor" package="R0805" value="150" x="-16.51" y="50.8"/>
-<element name="R8" library="resistor" package="R0805" value="330" x="-21.59" y="50.8"/>
-<element name="R9" library="resistor" package="R0805" value="220" x="-26.67" y="50.8"/>
-<element name="T11" library="transistor" package="SOT23" value="BC847" x="-55.88" y="22.86"/>
-<element name="R10" library="resistor" package="RTRIMT93YA" value="1k" x="-17.78" y="6.35"/>
-<element name="C5" library="resistor" package="E2-5" value="220u" x="-62.23" y="50.8"/>
-<element name="C6" library="resistor" package="E2-5" value="10u" x="-27.94" y="57.15"/>
-<element name="R11" library="resistor" package="R0805" value="10k" x="-31.75" y="44.45"/>
-<element name="C7" library="resistor" package="C0805" value="220n" x="-64.77" y="30.48"/>
-<element name="R12" library="resistor" package="R0805" value="22" x="-27.94" y="38.1"/>
-<element name="R13" library="resistor" package="R0805" value="180" x="-33.02" y="38.1"/>
-<element name="R14" library="resistor" package="R0805" value="1k" x="-38.1" y="38.1"/>
-<element name="T12" library="transistor" package="SOT23" value="BC847" x="-63.5" y="22.86"/>
-<element name="T13" library="transistor" package="SOT23" value="BC847" x="-17.78" y="30.48"/>
-<element name="T14" library="transistor" package="SOT23" value="BC847" x="-25.4" y="30.48"/>
-<element name="T15" library="transistor" package="SOT23" value="BC847" x="-33.02" y="30.48"/>
-<element name="R15" library="resistor" package="R0805" value="1k2" x="-43.18" y="38.1"/>
-<element name="R16" library="resistor" package="R0805" value="270k" x="-39.37" y="30.48"/>
-<element name="R17" library="resistor" package="R0805" value="270k" x="-45.72" y="30.48"/>
-<element name="R18" library="resistor" package="R0805" value="47k" x="-48.26" y="38.1"/>
-<element name="R19" library="resistor" package="R0805" value="47k" x="-53.34" y="38.1"/>
-<element name="C8" library="resistor" package="C0805" value="220n" x="-16.51" y="38.1"/>
-<element name="C9" library="resistor" package="E2-5" value="10u" x="-36.83" y="57.15"/>
-<element name="C10" library="resistor" package="E2-5" value="10u" x="-19.05" y="57.15"/>
-<element name="R20" library="resistor" package="RTRIMT93YA" value="50k log" x="-27.94" y="6.35"/>
-<element name="IC1" library="linear" package="SO08" value="TL072D" x="-58.42" y="3.81"/>
-<element name="R21" library="resistor" package="R0805" value="56k" x="-58.42" y="38.1"/>
-<element name="R22" library="resistor" package="R0805" value="120k" x="-52.07" y="30.48"/>
-<element name="C11" library="resistor" package="C0805" value="10n" x="-36.83" y="44.45"/>
-<element name="C12" library="resistor" package="C0805" value="10n" x="-26.67" y="44.45"/>
-<element name="Q1" library="transistor-pnp" package="SOT23-BEC" value="BC857CSMD" x="-22.86" y="15.24"/>
-<element name="R23" library="resistor" package="RTRIMT93YA" value="10k" x="-38.1" y="6.35"/>
-<element name="R24" library="resistor" package="R0805" value="100k" x="-58.42" y="30.48"/>
-<element name="R25" library="resistor" package="R0805" value="470" x="-63.5" y="38.1"/>
-<element name="C13" library="resistor" package="C0805" value="100p" x="-22.86" y="38.1"/>
-<element name="R26" library="resistor" package="R0805" value="1k8" x="-16.51" y="44.45"/>
-<element name="R27" library="resistor" package="RTRIMT93YA" value="500" x="-48.26" y="6.35"/>
-<element name="R28" library="resistor" package="R0805" value="56k" x="-21.59" y="44.45"/>
+<element name="T1" library="transistor" package="SOT23" value="BC847" x="-30.48" y="15.24" smashed="yes">
+<attribute name="NAME" x="-32.385" y="17.145" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-32.385" y="12.065" size="1.27" layer="27"/>
+</element>
+<element name="T2" library="transistor" package="SOT23" value="BC847" x="-38.1" y="15.24" smashed="yes">
+<attribute name="NAME" x="-40.005" y="17.145" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-40.005" y="12.065" size="1.27" layer="27"/>
+</element>
+<element name="T3" library="transistor" package="SOT23" value="BC847" x="-45.72" y="15.24" smashed="yes">
+<attribute name="NAME" x="-47.625" y="17.145" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-47.625" y="12.065" size="1.27" layer="27"/>
+</element>
+<element name="T4" library="transistor" package="SOT23" value="BC847" x="-53.34" y="15.24" smashed="yes">
+<attribute name="NAME" x="-55.245" y="17.145" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-55.245" y="12.065" size="1.27" layer="27"/>
+</element>
+<element name="T5" library="transistor" package="SOT23" value="BC847" x="-60.96" y="15.24" smashed="yes">
+<attribute name="NAME" x="-62.865" y="17.145" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-62.865" y="12.065" size="1.27" layer="27"/>
+</element>
+<element name="T6" library="transistor" package="SOT23" value="BC847" x="-17.78" y="22.86" smashed="yes">
+<attribute name="NAME" x="-19.685" y="24.765" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-19.685" y="19.685" size="1.27" layer="27"/>
+</element>
+<element name="T7" library="transistor" package="SOT23" value="BC847" x="-25.4" y="22.86" smashed="yes">
+<attribute name="NAME" x="-27.305" y="24.765" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-27.305" y="19.685" size="1.27" layer="27"/>
+</element>
+<element name="T8" library="transistor" package="SOT23" value="BC847" x="-33.02" y="22.86" smashed="yes">
+<attribute name="NAME" x="-34.925" y="24.765" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-34.925" y="19.685" size="1.27" layer="27"/>
+</element>
+<element name="T9" library="transistor" package="SOT23" value="BC847" x="-40.64" y="22.86" smashed="yes">
+<attribute name="NAME" x="-42.545" y="24.765" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-42.545" y="19.685" size="1.27" layer="27"/>
+</element>
+<element name="T10" library="transistor" package="SOT23" value="BC847" x="-48.26" y="22.86" smashed="yes">
+<attribute name="NAME" x="-50.165" y="24.765" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-50.165" y="19.685" size="1.27" layer="27"/>
+</element>
+<element name="C1" library="resistor" package="C0805" value="47n" x="-31.75" y="50.8" smashed="yes">
+<attribute name="NAME" x="-32.639" y="51.816" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-32.639" y="48.514" size="1.27" layer="27"/>
+</element>
+<element name="C2" library="resistor" package="C0805" value="47n" x="-36.83" y="50.8" smashed="yes">
+<attribute name="NAME" x="-37.719" y="51.816" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-37.719" y="48.514" size="1.27" layer="27"/>
+</element>
+<element name="C3" library="resistor" package="C0805" value="47n" x="-41.91" y="50.8" smashed="yes">
+<attribute name="NAME" x="-42.799" y="51.816" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-42.799" y="48.514" size="1.27" layer="27"/>
+</element>
+<element name="C4" library="resistor" package="C0805" value="47n" x="-46.99" y="50.8" smashed="yes">
+<attribute name="NAME" x="-47.879" y="51.816" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-47.879" y="48.514" size="1.27" layer="27"/>
+</element>
+<element name="R1" library="resistor" package="R0805" value="330" x="-41.91" y="44.45" smashed="yes">
+<attribute name="NAME" x="-42.672" y="45.466" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-42.672" y="42.164" size="1.27" layer="27"/>
+</element>
+<element name="R2" library="resistor" package="R0805" value="150" x="-46.99" y="44.45" smashed="yes">
+<attribute name="NAME" x="-47.752" y="45.466" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-47.752" y="42.164" size="1.27" layer="27"/>
+</element>
+<element name="R3" library="resistor" package="R0805" value="150" x="-52.07" y="44.45" smashed="yes">
+<attribute name="NAME" x="-52.832" y="45.466" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-52.832" y="42.164" size="1.27" layer="27"/>
+</element>
+<element name="R4" library="resistor" package="R0805" value="150" x="-57.15" y="44.45" smashed="yes">
+<attribute name="NAME" x="-57.912" y="45.466" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-57.912" y="42.164" size="1.27" layer="27"/>
+</element>
+<element name="R5" library="resistor" package="R0805" value="1k" x="-52.07" y="50.8" smashed="yes">
+<attribute name="NAME" x="-52.832" y="51.816" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-52.832" y="48.514" size="1.27" layer="27"/>
+</element>
+<element name="R6" library="resistor" package="R0805" value="470" x="-62.23" y="44.45" smashed="yes">
+<attribute name="NAME" x="-62.992" y="45.466" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-62.992" y="42.164" size="1.27" layer="27"/>
+</element>
+<element name="R7" library="resistor" package="R0805" value="150" x="-16.51" y="50.8" smashed="yes">
+<attribute name="NAME" x="-17.272" y="51.816" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-17.272" y="48.514" size="1.27" layer="27"/>
+</element>
+<element name="R8" library="resistor" package="R0805" value="330" x="-21.59" y="50.8" smashed="yes">
+<attribute name="NAME" x="-22.352" y="51.816" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-22.352" y="48.514" size="1.27" layer="27"/>
+</element>
+<element name="R9" library="resistor" package="R0805" value="220" x="-26.67" y="50.8" smashed="yes">
+<attribute name="NAME" x="-27.432" y="51.816" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-27.432" y="48.514" size="1.27" layer="27"/>
+</element>
+<element name="T11" library="transistor" package="SOT23" value="BC847" x="-55.88" y="22.86" smashed="yes">
+<attribute name="NAME" x="-57.785" y="24.765" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-57.785" y="19.685" size="1.27" layer="27"/>
+</element>
+<element name="R10" library="resistor" package="RTRIMT93YA" value="1k" x="-17.78" y="6.35" smashed="yes">
+<attribute name="NAME" x="-20.82" y="1.46" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="-13.77" y="1.46" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C5" library="resistor" package="E2-5" value="220u" x="-62.23" y="50.8" smashed="yes">
+<attribute name="NAME" x="-59.69" y="51.816" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="-59.69" y="48.641" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="C6" library="resistor" package="E2-5" value="10u" x="-27.94" y="57.15" smashed="yes">
+<attribute name="NAME" x="-25.4" y="58.166" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="-25.4" y="54.991" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="R11" library="resistor" package="R0805" value="10k" x="-31.75" y="44.45" smashed="yes">
+<attribute name="NAME" x="-32.512" y="45.466" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-32.512" y="42.164" size="1.27" layer="27"/>
+</element>
+<element name="C7" library="resistor" package="C0805" value="220n" x="-64.77" y="30.48" smashed="yes">
+<attribute name="NAME" x="-65.659" y="31.496" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-65.659" y="28.194" size="1.27" layer="27"/>
+</element>
+<element name="R12" library="resistor" package="R0805" value="22" x="-27.94" y="38.1" smashed="yes">
+<attribute name="NAME" x="-28.702" y="39.116" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-28.702" y="35.814" size="1.27" layer="27"/>
+</element>
+<element name="R13" library="resistor" package="R0805" value="180" x="-33.02" y="38.1" smashed="yes">
+<attribute name="NAME" x="-33.782" y="39.116" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-33.782" y="35.814" size="1.27" layer="27"/>
+</element>
+<element name="R14" library="resistor" package="R0805" value="1k" x="-38.1" y="38.1" smashed="yes">
+<attribute name="NAME" x="-38.862" y="39.116" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-38.862" y="35.814" size="1.27" layer="27"/>
+</element>
+<element name="T12" library="transistor" package="SOT23" value="BC847" x="-63.5" y="22.86" smashed="yes">
+<attribute name="NAME" x="-65.405" y="24.765" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-65.405" y="19.685" size="1.27" layer="27"/>
+</element>
+<element name="T13" library="transistor" package="SOT23" value="BC847" x="-17.78" y="30.48" smashed="yes">
+<attribute name="NAME" x="-19.685" y="32.385" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-19.685" y="27.305" size="1.27" layer="27"/>
+</element>
+<element name="T14" library="transistor" package="SOT23" value="BC847" x="-25.4" y="30.48" smashed="yes">
+<attribute name="NAME" x="-27.305" y="32.385" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-27.305" y="27.305" size="1.27" layer="27"/>
+</element>
+<element name="T15" library="transistor" package="SOT23" value="BC847" x="-33.02" y="30.48" smashed="yes">
+<attribute name="NAME" x="-34.925" y="32.385" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-34.925" y="27.305" size="1.27" layer="27"/>
+</element>
+<element name="R15" library="resistor" package="R0805" value="1k2" x="-43.18" y="38.1" smashed="yes">
+<attribute name="NAME" x="-43.942" y="39.116" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-43.942" y="35.814" size="1.27" layer="27"/>
+</element>
+<element name="R16" library="resistor" package="R0805" value="270k" x="-39.37" y="30.48" smashed="yes">
+<attribute name="NAME" x="-40.132" y="31.496" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-40.132" y="28.194" size="1.27" layer="27"/>
+</element>
+<element name="R17" library="resistor" package="R0805" value="270k" x="-45.72" y="30.48" smashed="yes">
+<attribute name="NAME" x="-46.482" y="31.496" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-46.482" y="28.194" size="1.27" layer="27"/>
+</element>
+<element name="R18" library="resistor" package="R0805" value="47k" x="-48.26" y="38.1" smashed="yes">
+<attribute name="NAME" x="-49.022" y="39.116" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-49.022" y="35.814" size="1.27" layer="27"/>
+</element>
+<element name="R19" library="resistor" package="R0805" value="47k" x="-53.34" y="38.1" smashed="yes">
+<attribute name="NAME" x="-54.102" y="39.116" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-54.102" y="35.814" size="1.27" layer="27"/>
+</element>
+<element name="C8" library="resistor" package="C0805" value="220n" x="-16.51" y="38.1" smashed="yes">
+<attribute name="NAME" x="-17.399" y="39.116" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-17.399" y="35.814" size="1.27" layer="27"/>
+</element>
+<element name="C9" library="resistor" package="E2-5" value="10u" x="-36.83" y="57.15" smashed="yes">
+<attribute name="NAME" x="-34.29" y="58.166" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="-34.29" y="54.991" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="C10" library="resistor" package="E2-5" value="10u" x="-19.05" y="57.15" smashed="yes">
+<attribute name="NAME" x="-16.51" y="58.166" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="-16.51" y="54.991" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="R20" library="resistor" package="RTRIMT93YA" value="50k log" x="-27.94" y="6.35" smashed="yes">
+<attribute name="NAME" x="-30.98" y="1.46" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="-23.93" y="1.46" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="IC1" library="linear" package="SO08" value="TL072D" x="-58.42" y="3.81" smashed="yes">
+<attribute name="NAME" x="-61.087" y="1.905" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="-54.483" y="1.905" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R21" library="resistor" package="R0805" value="56k" x="-58.42" y="38.1" smashed="yes">
+<attribute name="NAME" x="-59.182" y="39.116" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-59.182" y="35.814" size="1.27" layer="27"/>
+</element>
+<element name="R22" library="resistor" package="R0805" value="120k" x="-52.07" y="30.48" smashed="yes">
+<attribute name="NAME" x="-52.832" y="31.496" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-52.832" y="28.194" size="1.27" layer="27"/>
+</element>
+<element name="C11" library="resistor" package="C0805" value="10n" x="-36.83" y="44.45" smashed="yes">
+<attribute name="NAME" x="-37.719" y="45.466" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-37.719" y="42.164" size="1.27" layer="27"/>
+</element>
+<element name="C12" library="resistor" package="C0805" value="10n" x="-26.67" y="44.45" smashed="yes">
+<attribute name="NAME" x="-27.559" y="45.466" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-27.559" y="42.164" size="1.27" layer="27"/>
+</element>
+<element name="Q1" library="transistor-pnp" package="SOT23-BEC" value="BC857CSMD" x="-22.86" y="15.24" smashed="yes">
+<attribute name="NAME" x="-24.765" y="17.145" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-24.765" y="12.065" size="1.27" layer="27"/>
+</element>
+<element name="R23" library="resistor" package="RTRIMT93YA" value="10k" x="-38.1" y="6.35" smashed="yes">
+<attribute name="NAME" x="-41.14" y="1.46" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="-34.09" y="1.46" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R24" library="resistor" package="R0805" value="100k" x="-58.42" y="30.48" smashed="yes">
+<attribute name="NAME" x="-59.182" y="31.496" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-59.182" y="28.194" size="1.27" layer="27"/>
+</element>
+<element name="R25" library="resistor" package="R0805" value="470" x="-63.5" y="38.1" smashed="yes">
+<attribute name="NAME" x="-64.262" y="39.116" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-64.262" y="35.814" size="1.27" layer="27"/>
+</element>
+<element name="C13" library="resistor" package="C0805" value="100p" x="-22.86" y="38.1" smashed="yes">
+<attribute name="NAME" x="-23.749" y="39.116" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-23.749" y="35.814" size="1.27" layer="27"/>
+</element>
+<element name="R26" library="resistor" package="R0805" value="1k8" x="-16.51" y="44.45" smashed="yes">
+<attribute name="NAME" x="-17.272" y="45.466" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-17.272" y="42.164" size="1.27" layer="27"/>
+</element>
+<element name="R27" library="resistor" package="RTRIMT93YA" value="500" x="-48.26" y="6.35" smashed="yes">
+<attribute name="NAME" x="-51.3" y="1.46" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="-44.25" y="1.46" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R28" library="resistor" package="R0805" value="56k" x="-21.59" y="44.45" smashed="yes">
+<attribute name="NAME" x="-22.352" y="45.466" size="1.27" layer="25"/>
+<attribute name="VALUE" x="-22.352" y="42.164" size="1.27" layer="27"/>
+</element>
 </elements>
 <signals>
 <signal name="N$1">
@@ -1782,6 +1964,8 @@ design rules under a new name.</description>
 <signal name="N$29">
 <contactref element="C9" pad="-"/>
 <contactref element="R20" pad="2"/>
+<contactref element="R20" pad="1"/>
+<wire x1="-27.94" y1="6.35" x2="-27.94" y2="3.81" width="0" layer="19" extent="1-1"/>
 <wire x1="-35.814" y1="57.15" x2="-27.94" y2="6.35" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$30">
@@ -1856,6 +2040,13 @@ design rules under a new name.</description>
 <wire x1="-22.44" y1="44.45" x2="-30.9" y2="44.45" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
+<mfgpreviewcolors>
+<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
+<mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
+<mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
+<mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
+<mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
+</mfgpreviewcolors>
 </board>
 </drawing>
 </eagle>
